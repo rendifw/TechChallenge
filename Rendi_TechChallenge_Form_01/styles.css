@@ -1,0 +1,20 @@
+:root {
+    --text: rgb(219, 237, 255);
+    --background: rgb(0, 15, 36);
+    --blue: rgb(117, 177, 255);
+    --dark-blue: rgba(117, 177, 255, 0.5);
+    --purple: rgb(101, 0, 173);
+    --dark-purple: rgba(101, 0, 173, 0.5);
+    --pink: rgb(224, 26, 255);
+}
+
+
+body {
+    background-color: var(--background);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

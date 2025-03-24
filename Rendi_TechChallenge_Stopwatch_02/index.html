@@ -5,9 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Stopwatch</title>
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
-    
+    <section>
+        <h1>Stopwatch</h1>
+        <h2 id="stopwatch"></h2>
+        <div>
+            <div>
+                <button class="lap">Lap</button>
+                <button class="reset">Reset</button>
+            </div>
+            <div>
+                <button class="start">Start</button>
+                <button class="stop">Stop</button>
+            </div>
+        </div>
+        <ol class="lap-list"></ol>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>

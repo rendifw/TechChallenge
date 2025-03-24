@@ -1,13 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Form with validation</title>
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
 </head>
+
 <body>
-    
-    <script src="script.js"></script>
+    <div class="form-container">
+        <h1>Sign Up Form</h1>
+        <form>
+            <div class="full-name">
+                <label for="full-name">Full Name</label>
+                <input id="full-name" type="text" placeholder="Enter your full name">
+                <label class="error error-name"></label>
+            </div>
+
+            <div class="email">
+                <label for="email">Email</label>
+                <input id="email" type="text" placeholder="Enter your email">
+                <label class="error error-email"></label>
+            </div>
+
+            <div class="gender">
+                <label for="gender">Gender</label>
+                <div class="gender-options">
+                    <div class="male">
+                        <input id="male" type="radio" name="gender" value="male">
+                        <label for="male">Male</label>
+                    </div>
+
+                    <div class="female">
+                        <input id="female" type="radio" name="gender" value="female">
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+                <label class="error error-gender"></label>
+            </div>
+
+            <div class="password">
+                <label for="password">Password</label>
+                <div class="password-wrapper">
+                    <input id="password" type="password" placeholder="Create a password">
+                    <img class="toggle-password" src="Eye.svg" alt="Show Password">
+                </div>
+                <label class="error error-password"></label>
+            </div>
+
+            <div class="confirm">
+                <label for="confirm-password">Confirm Password</label>
+                <div class="password-wrapper">
+                    <input id="confirm-password" type="password" placeholder="Confirm your password">
+                    <img class="toggle-password" src="Eye.svg" alt="Show Password">
+                </div>
+                <label class="error error-confirm"></label>
+            </div>
+
+            <button class="submit" type="submit">Submit</button>
+        </form>
+        <script type="module" src="script.js"></script>
+    </div>
 </body>
+
 </html>

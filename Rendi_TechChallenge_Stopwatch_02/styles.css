@@ -1,20 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Red+Rose:wght@300..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 :root {
     --text: rgb(219, 237, 255);
     --background: rgb(0, 15, 36);
     --blue: rgb(117, 177, 255);
-    --dark-blue: rgba(117, 177, 255, 0.5);
+    --dark-blue: rgba(117, 177, 255, 0.3);
     --purple: rgb(101, 0, 173);
-    --dark-purple: rgba(101, 0, 173, 0.5);
+    --dark-purple: rgba(101, 0, 173, 0.3);
     --pink: rgb(224, 26, 255);
 }
 
 
 body {
+  font-family: 'Red Rose';
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Francois One';
+  font-weight: 700;
+}
+
+body {
     background-color: var(--background);
-    min-height: 100vh;
+    min-height: 100dvh;
     width: 100%;
     display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: start;
+    align-items: center;
+    padding: 4rem;
+    color: var(--text)
+}
+
+.stopwatch-container {
+    background-color: var(--dark-blue);
+    padding: 2rem;
+    min-width: 24rem;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+#stopwatch {
+    min-height: 4rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-family: "Courier New";
+    font-weight: bold;
+}
+
+
+.buttons {
+    display: flex;
+    gap: 4rem;
+    margin-bottom: 2rem;
+}
+
+button {
+    touch-action: manipulation;
+    width: 3rem;
+    height: 3rem;
+    color: black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.left button {
+    background-color: white;
+    border-color: black;
+    outline: 2px solid white;
+}
+
+.start {
+    background-color: var(--blue);
+    border-color: black;
+    outline: 2px solid var(--blue);
+}
+
+.stop {
+    background-color: var(--pink);
+    border-color: black;
+    outline: 2px solid var(--pink);
+}
+
+button:disabled {
+    background-color: #ccc;
+    outline: 2px solid #ccc;
+    color: white;
+    cursor: not-allowed;
+}
+
+ol {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    display: flex;
+    padding-block: 0.5rem;
+    padding-inline: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid var(--blue);
+    font-family: "Courier New";
+    font-weight: bold;
+}
+
+li:last-of-type {
+    border-bottom: 2px solid var(--blue);
+}

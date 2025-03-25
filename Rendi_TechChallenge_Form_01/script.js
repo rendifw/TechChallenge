@@ -13,6 +13,7 @@ $(function() {
     })
     
     function validateForm() {
+        // TODO: Validate email using regex and passord min length
         let emptyError = "Field is required!"
         let fullName = $("#full-name").val()
         let email = $("#email").val()

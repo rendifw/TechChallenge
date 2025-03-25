@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +8,28 @@
     <title>Stopwatch</title>
     <script src="/node_modules/jquery/dist/jquery.min.js"></script>
 </head>
+
 <body>
-    <section>
-        <h1>Stopwatch</h1>
-        <h2 id="stopwatch"></h2>
-        <div>
-            <div>
-                <button class="lap">Lap</button>
-                <button class="reset">Reset</button>
+    <h2>Stopwatch</h2>
+    <section class="stopwatch-container">
+        <h1 id="stopwatch">
+            00 : 00 : 000
+        </h1>
+        <div class="buttons">
+            <div class="left">
+                <button class="lap" disabled>Lap</button>
+                <button class="reset" hidden>Reset</button>
             </div>
-            <div>
+            <div class="right">
                 <button class="start">Start</button>
-                <button class="stop">Stop</button>
+                <button class="stop" hidden>Stop</button>
             </div>
         </div>
-        <ol class="lap-list"></ol>
+        <ol class="lap-list">
+            
+        </ol>
     </section>
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -7,11 +7,47 @@
     <title>Light/Dark Mode</title>
     <script src="/node_modules/jquery/dist/jquery.min.js"></script>
 </head>
-<body>
+<body class="dark">
+    <h1>Toggle Light and Dark Mode</h1>
     <button id="theme">
-        day icon
-        night icon
+        <div class="circle"></div>
+        <img src="moon.png" alt="Night">
+        <img src="sunny.png" alt="Day">
     </button>
+    <hr>
+    <section id="content">
+        <section class="todo-list">
+            <h1>My Todo List</h1>
+            <form>
+                <input class="input" type="text" placeholder="Your task..." />
+                <button class="submit" type="submit">+</button>
+            </form>
+            <ul class="list">
+                <li>
+                    <div class="todo">
+                        <input type="checkbox" id="1">
+                        <label for="1">Do chores</label>
+                    </div>
+                    <button class="delete">
+                        <img src="trash.png" alt="Delete">
+                    </button>
+                </li>
+                <li>
+                    <div class="todo">
+                        <input type="checkbox" id="2" checked>
+                        <label for="2">Finish TechChallenge</label>
+                    </div>
+                    <button class="delete">
+                        <img src="trash.png" alt="Delete">
+                    </button>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h1>About us</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis quibusdam sed dignissimos debitis commodi maiores excepturi, itaque quam, facere vel quaerat. Maiores ex numquam quibusdam, excepturi odio earum! Dolorum autem incidunt, ipsum animi eveniet dolor odio saepe corporis in aspernatur corrupti! Quidem perspiciatis cumque deserunt, voluptates dignissimos nesciunt mollitia facere!</p>
+        </section>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,20 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Red+Rose:wght@300..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 :root {
+    /* DARK MODE */
     --text: rgb(219, 237, 255);
+    --dark-text: #aaa;
     --background: rgb(0, 15, 36);
     --blue: rgb(117, 177, 255);
-    --dark-blue: rgba(117, 177, 255, 0.5);
+    --dark-blue: rgba(117, 177, 255, 0.3);
     --purple: rgb(101, 0, 173);
-    --dark-purple: rgba(101, 0, 173, 0.5);
+    --dark-purple: rgba(101, 0, 173, 0.3);
     --pink: rgb(224, 26, 255);
+}
+
+body.light {
+    --text: #001224;
+    --dark-text: #333;
+    --background: #dbeaff;
+    --blue: #003c8a;
+    --purple: #b752ff;
+    --pink: #c700e6;
 }
 
 
 body {
+  font-family: 'Red Rose';
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Francois One';
+  font-weight: 700;
+}
+
+body {
     background-color: var(--background);
-    min-height: 100vh;
+    min-height: 100dvh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: start;
+    align-items: center;
+    padding: 4rem;
+    color: var(--text)
+}
+
+#theme {
+    all: unset;
+    touch-action: manipulation;
+    cursor: pointer;
+    padding: 1rem;
+    background-color: var(--text);
+    border: 4px solid black;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 5rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+body.dark .circle {
+    transform: translateX(10rem);
+}
+
+body.light .circle {
+    transform: translateX(-0.2rem);
+}
+
+.circle {
+    position: absolute;
+    background-color: #333;
+    border: 8px solid black;
+    width: 8.5rem;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    transition: transform 0.2s ease-in-out;
+}
+
+
+#content {
+    display: flex;
+    gap: 4rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Todo List */
+
+.todo-list {
+    min-width: 35dvw;
+    padding: 2rem;
+    background-color: var(--dark-purple);
+    border: 2px solid var(--purple);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+}
+
+input[type="text"] {
+    border-radius: 0;
+    padding: 0.5rem 1rem;
+    flex: 1;
+    width: 100%;
+    font-weight: bold;
+}
+
+form > button {
+    all: unset;
+    border-radius: 0 !important;
+    background-color: var(--blue);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 2rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+body.light form > button {
+    color: white;
+}
+
+ul {
+    list-style: none;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
+li {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.todo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    color: var(--dark-text)
+}
+
+.todo > label {
+    width: 22dvw;
+    max-width: 22dvw;
+    white-space: nowrap;
+    font-size: 1.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.delete {
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2rem;
+    width: 1.5rem;
+    aspect-ratio: 1/1;
+    background-color: red;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: var(--text);
+    width: 100%;
+}

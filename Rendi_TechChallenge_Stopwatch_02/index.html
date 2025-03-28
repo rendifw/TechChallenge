@@ -6,16 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Stopwatch</title>
+    <!-- Jquery -->
     <script src="/node_modules/jquery/dist/jquery.min.js"></script>
 </head>
 
 <body>
     <h2>Stopwatch</h2>
     <section class="stopwatch-container">
+        <!-- stopwatch dengan state 00 : 00 : 000 akan di update html valuenya -->
         <h1 id="stopwatch">
             00 : 00 : 000
         </h1>
         <div class="buttons">
+            <!-- Tombol stopwatch ada dua untuk setiap sisi, tapi only one at a time -->
             <div class="left">
                 <button class="lap" disabled>Lap</button>
                 <button class="reset" hidden>Reset</button>
@@ -25,10 +28,13 @@
                 <button class="stop" hidden>Stop</button>
             </div>
         </div>
+
+        <!-- Lap list awalnya kosong, nanti akan diisi dengan list -->
         <ol class="lap-list">
             
         </ol>
     </section>
+    <!-- connect ke js -->
     <script src="script.js"></script>
 </body>
 

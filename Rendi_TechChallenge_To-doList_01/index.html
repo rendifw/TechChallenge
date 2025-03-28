@@ -5,19 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
     <title>To-do List</title>
+    <!-- Jquery -->
     <script src="/node_modules/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
     <section class="todo-list">
         <h1>My Todo List</h1>
+        <!-- Input dan submit dibuat dalam bentuk form -->
         <form>
             <input class="input" type="text" placeholder="Your task..." />
             <button class="submit" type="submit">+</button>
         </form>
+        <!-- List yang awalnya kosong akan diupdate menggunakan js -->
         <ul class="list">
             
         </ul>
     </section>
+    <!-- connect ke js -->
     <script src="script.js"></script>
 </body>
 </html>

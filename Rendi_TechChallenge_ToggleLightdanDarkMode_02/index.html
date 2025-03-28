@@ -7,14 +7,22 @@
     <title>Light/Dark Mode</title>
     <script src="/node_modules/jquery/dist/jquery.min.js"></script>
 </head>
+
+<!-- awalnya theme dark, dan akan diganti classnya di body saat user click toggle -->
 <body class="dark">
     <h1>Toggle Light and Dark Mode</h1>
+
+    <!-- Button mempunyai icon moon dan sun, dan ada juga div yang digunakan sebagai circle untuk menunjukkan state -->
     <button id="theme">
         <div class="circle"></div>
         <img src="moon.png" alt="Night">
         <img src="sunny.png" alt="Day">
     </button>
+
+    <!-- Divider -->
     <hr>
+
+    <!-- Content yang akan diganti themenya -->
     <section id="content">
         <section class="todo-list">
             <h1>My Todo List</h1>

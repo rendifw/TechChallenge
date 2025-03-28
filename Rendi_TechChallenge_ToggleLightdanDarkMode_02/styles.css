@@ -6,6 +6,8 @@
     padding: 0;
 }
 
+
+/* Class awal yaitu dark mode */
 :root {
     /* DARK MODE */
     --text: rgb(219, 237, 255);
@@ -18,6 +20,8 @@
     --pink: rgb(224, 26, 255);
 }
 
+
+/* Jika body ada class light, maka override yang dark mode menjadi css baru ini */
 body.light {
     --text: #001224;
     --dark-text: #333;
@@ -51,6 +55,9 @@ body {
     color: var(--text)
 }
 
+/* Reset css button ini, lalu dibikin custom */
+/* dibuat transisi bg-colornya dan position relative agar circle bisa absolute */
+/* touch action manipulation agar tombol bisa di spam di mobile tampa kedouble click zoom */
 #theme {
     all: unset;
     touch-action: manipulation;
@@ -67,14 +74,18 @@ body {
     transition: background-color 0.2s ease-in-out;
 }
 
+
+/* Jika body mempunyai class dark, maka pindahkan circle ke kanan */
 body.dark .circle {
     transform: translateX(10rem);
 }
 
+/* Jika body mempunyai class light, maka pindahkan circle ke kiri */
 body.light .circle {
     transform: translateX(-0.2rem);
 }
 
+/* Circle mempunyai transition dan position absolute */
 .circle {
     position: absolute;
     background-color: #333;
